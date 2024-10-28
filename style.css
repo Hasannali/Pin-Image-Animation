@@ -1,0 +1,134 @@
+:root {
+    --pre-color: #fff;
+    --second-color: #0a0a0a;
+    --color-1-1: #8E2518;
+    --color-1-2: #ff6b4f;
+    --cubicbz: cubic-bezier(.9, 0, .1, 1);
+    --fz-big: 60px;
+    --pd:50px;
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+    font-feature-settings: "pnum" on, "lnum" on;
+}
+body {
+    background-color: var(--second-color);
+}
+.wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    z-index: 1;
+}
+.content {
+    width: 100%;
+    height: auto;
+}
+
+/* GSAP Scrolltrigger pin image animation */
+
+.spacer {
+    width: 100%;
+    height: 50vh;
+    background-color: #ddd;
+}
+.work {
+    display: flex;
+}
+.work_left {
+    position: relative;
+    width: 54%;
+    z-index: 2;
+    /* outline: 1px solid red; */
+}
+.work_text {
+    margin: auto;
+    width: 80%;
+}
+.work_info {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* outline: 1px solid green; */
+}.work_num {
+    display: block;
+    line-height: .9;
+    text-align: right;
+    font-size: 18px;
+    transform: skewX(-20deg);
+    color: var(--color-1-1);
+}
+.title {
+    text-align: right;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: var(--pre-color);
+}
+.title .stroke {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pre-color);
+}
+.work_link {
+    display: block;
+    width: 365px;
+    margin-top: 50px;
+    margin-left: auto;
+    padding: 18px 0;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--pre-color);
+    letter-spacing: 4px;
+    border: 2px solid var(--color-1-1);
+    border-radius: 30px;
+    transition: .4s;
+}
+.work_link:hover {
+    background-color: var(--color-1-1);
+    color: var(--color-1-2);
+    letter-spacing: 6px;
+}
+.work_right {
+    width: 46%;
+    height: auto;
+    /* background: green; */
+}
+.work_right-b1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    /* height: 80vh;
+    top: 10vh; */
+    /* background-color: #ff6b4f; */
+}
+.work_photo {
+    width: 40vw;
+    height: 30vw;
+    position: relative;
+}
+.work_photo-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 80px;
+    overflow: hidden;
+}
+.work_photo-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
